@@ -19,7 +19,32 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            mainLabel.Text = "Hi Rebecca!";
+            mainLabel.Text = "Hive One Status: ";
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            mainLabel.Text = "Hive Two Status: ";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            mainLabel.Text = "Orchard Status: ";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            mainLabel.Text = "Greenhouse Status: ";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            mainLabel.Text = "Chicken Coop Status: ";
+        }
+
+        private void mainLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
