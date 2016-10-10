@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Farm));
             this.clickMeButton = new System.Windows.Forms.Button();
             this.mainLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -40,9 +41,10 @@
             // 
             this.clickMeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clickMeButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.clickMeButton.Location = new System.Drawing.Point(12, 12);
+            this.clickMeButton.Location = new System.Drawing.Point(22, 20);
+            this.clickMeButton.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.clickMeButton.Name = "clickMeButton";
-            this.clickMeButton.Size = new System.Drawing.Size(75, 23);
+            this.clickMeButton.Size = new System.Drawing.Size(138, 39);
             this.clickMeButton.TabIndex = 0;
             this.clickMeButton.Text = "Hive One";
             this.clickMeButton.UseVisualStyleBackColor = true;
@@ -52,9 +54,10 @@
             // 
             this.mainLabel.AutoSize = true;
             this.mainLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.mainLabel.Location = new System.Drawing.Point(17, 167);
+            this.mainLabel.Location = new System.Drawing.Point(31, 283);
+            this.mainLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.mainLabel.Name = "mainLabel";
-            this.mainLabel.Size = new System.Drawing.Size(48, 13);
+            this.mainLabel.Size = new System.Drawing.Size(82, 22);
             this.mainLabel.TabIndex = 1;
             this.mainLabel.Text = "Output...";
             this.mainLabel.Click += new System.EventHandler(this.mainLabel_Click);
@@ -63,9 +66,10 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(12, 41);
+            this.button1.Location = new System.Drawing.Point(22, 69);
+            this.button1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(138, 39);
             this.button1.TabIndex = 2;
             this.button1.Text = "Hive Two";
             this.button1.UseVisualStyleBackColor = true;
@@ -75,9 +79,10 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(12, 70);
+            this.button2.Location = new System.Drawing.Point(22, 118);
+            this.button2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(138, 39);
             this.button2.TabIndex = 3;
             this.button2.Text = "Orchard";
             this.button2.UseVisualStyleBackColor = true;
@@ -87,9 +92,10 @@
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(12, 99);
+            this.button3.Location = new System.Drawing.Point(22, 168);
+            this.button3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(138, 39);
             this.button3.TabIndex = 4;
             this.button3.Text = "Greenhouse";
             this.button3.UseVisualStyleBackColor = true;
@@ -99,9 +105,10 @@
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(12, 128);
+            this.button4.Location = new System.Drawing.Point(22, 217);
+            this.button4.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(138, 39);
             this.button4.TabIndex = 5;
             this.button4.Text = "Coop";
             this.button4.UseVisualStyleBackColor = true;
@@ -109,15 +116,20 @@
             // 
             // Farm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1358, 547);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.mainLabel);
             this.Controls.Add(this.clickMeButton);
+            this.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "Farm";
             this.Opacity = 0.8D;
             this.Text = "Farm";
