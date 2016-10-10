@@ -53,6 +53,7 @@
             // mainLabel
             // 
             this.mainLabel.AutoSize = true;
+            this.mainLabel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.mainLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.mainLabel.Location = new System.Drawing.Point(31, 283);
             this.mainLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
@@ -131,7 +132,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "Farm";
-            this.Opacity = 0.8D;
             this.Text = "Farm";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
