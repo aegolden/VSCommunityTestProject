@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form1
+    partial class Farm
     {
         /// <summary>
         /// Required designer variable.
@@ -52,7 +52,7 @@
             // 
             this.mainLabel.AutoSize = true;
             this.mainLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.mainLabel.Location = new System.Drawing.Point(12, 167);
+            this.mainLabel.Location = new System.Drawing.Point(17, 167);
             this.mainLabel.Name = "mainLabel";
             this.mainLabel.Size = new System.Drawing.Size(48, 13);
             this.mainLabel.TabIndex = 1;
@@ -107,7 +107,7 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Form1
+            // Farm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -118,8 +118,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.mainLabel);
             this.Controls.Add(this.clickMeButton);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Farm";
+            this.Opacity = 0.8D;
+            this.Text = "Farm";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

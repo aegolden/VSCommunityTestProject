@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form1 : Form
+    public partial class Farm : Form
     {
-        public Form1()
+        public Farm()
         {
             InitializeComponent();
         }
@@ -43,6 +43,11 @@ namespace WindowsFormsApplication1
         }
 
         private void mainLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
