@@ -70,5 +70,20 @@ namespace WindowsFormsApplication1
             SerialPort sp = (SerialPort)sender;
             _lastOxygenReading = sp.ReadLine();
         }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //checklist command box.
+        }
+
+        private void commandCenter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void commandCenter_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+
+        }
     }
 }

@@ -41,6 +41,7 @@
             this.serialPort3 = new System.IO.Ports.SerialPort(this.components);
             this.serialPort4 = new System.IO.Ports.SerialPort(this.components);
             this.serialPort5 = new System.IO.Ports.SerialPort(this.components);
+            this.commandCenter = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // hiveOneButton
@@ -74,7 +75,7 @@
             this.mainLabel.Location = new System.Drawing.Point(28, 261);
             this.mainLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.mainLabel.Name = "mainLabel";
-            this.mainLabel.Size = new System.Drawing.Size(619, 27);
+            this.mainLabel.Size = new System.Drawing.Size(259, 52);
             this.mainLabel.TabIndex = 1;
             this.mainLabel.Text = "Output...";
             this.mainLabel.Click += new System.EventHandler(this.mainLabel_Click);
@@ -173,6 +174,7 @@
             // 
             // monthCalendar1
             // 
+            this.monthCalendar1.BackColor = System.Drawing.Color.Snow;
             this.monthCalendar1.Location = new System.Drawing.Point(420, 18);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 6;
@@ -182,6 +184,24 @@
             this.serialPort1.PortName = "COM3";
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
+            // commandCenter
+            // 
+            this.commandCenter.BackColor = System.Drawing.Color.Snow;
+            this.commandCenter.FormattingEnabled = true;
+            this.commandCenter.Items.AddRange(new object[] {
+            "Fan",
+            "Vents",
+            "Watering System",
+            "Heater",
+            "Lights"});
+            this.commandCenter.Location = new System.Drawing.Point(420, 218);
+            this.commandCenter.Name = "commandCenter";
+            this.commandCenter.Size = new System.Drawing.Size(227, 304);
+            this.commandCenter.TabIndex = 7;
+            this.commandCenter.ThreeDCheckBoxes = true;
+            this.commandCenter.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.commandCenter_ItemCheck);
+            this.commandCenter.SelectedIndexChanged += new System.EventHandler(this.commandCenter_SelectedIndexChanged);
+            // 
             // Farm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -189,6 +209,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(665, 547);
+            this.Controls.Add(this.commandCenter);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.coopButton);
             this.Controls.Add(this.greenhouseButton);
@@ -221,6 +242,7 @@
         private System.IO.Ports.SerialPort serialPort3;
         private System.IO.Ports.SerialPort serialPort4;
         private System.IO.Ports.SerialPort serialPort5;
+        private System.Windows.Forms.CheckedListBox commandCenter;
     }
 }
 
