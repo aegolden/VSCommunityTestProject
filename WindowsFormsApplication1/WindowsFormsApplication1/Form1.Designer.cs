@@ -68,14 +68,13 @@
             // 
             // mainLabel
             // 
-            this.mainLabel.AutoSize = true;
             this.mainLabel.BackColor = System.Drawing.Color.Transparent;
             this.mainLabel.Font = new System.Drawing.Font("Kristen ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.mainLabel.Location = new System.Drawing.Point(28, 261);
             this.mainLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.mainLabel.Name = "mainLabel";
-            this.mainLabel.Size = new System.Drawing.Size(100, 27);
+            this.mainLabel.Size = new System.Drawing.Size(619, 27);
             this.mainLabel.TabIndex = 1;
             this.mainLabel.Text = "Output...";
             this.mainLabel.Click += new System.EventHandler(this.mainLabel_Click);
@@ -205,7 +204,6 @@
             this.Text = "Farm";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
