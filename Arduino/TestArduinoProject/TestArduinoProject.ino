@@ -10,7 +10,7 @@ void setup()
 void loop()
 {
 
-	Serial.println(analogRead(gasPin));
+	Serial.println(String(analogRead(gasPin)));
 	delay(1000); // Print value every 1 sec.
 
 }

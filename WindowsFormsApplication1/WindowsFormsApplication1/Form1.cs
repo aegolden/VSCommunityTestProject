@@ -16,6 +16,7 @@ namespace WindowsFormsApplication1
         public Farm()
         {
             InitializeComponent();
+            serialPort1.Open();
         }
 
         private void hiveOne_Click(object sender, EventArgs e)
@@ -43,7 +44,7 @@ namespace WindowsFormsApplication1
 
         private void greenhouseButton_Click(object sender, EventArgs e)
         {
-            mainLabel.Text = "Greenhouse Status: " + serialPort1.ReadExisting();
+            mainLabel.Text = "Greenhouse Status: " + serialPort1.ReadLine();
         }
 
         private void button4_Click(object sender, EventArgs e)
