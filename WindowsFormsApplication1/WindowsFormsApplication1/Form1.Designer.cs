@@ -42,6 +42,7 @@
             this.serialPort4 = new System.IO.Ports.SerialPort(this.components);
             this.serialPort5 = new System.IO.Ports.SerialPort(this.components);
             this.commandCenter = new System.Windows.Forms.CheckedListBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // hiveOneButton
@@ -187,6 +188,7 @@
             // commandCenter
             // 
             this.commandCenter.BackColor = System.Drawing.Color.Snow;
+            this.commandCenter.Font = new System.Drawing.Font("Kristen ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.commandCenter.FormattingEnabled = true;
             this.commandCenter.Items.AddRange(new object[] {
             "Fan",
@@ -194,13 +196,26 @@
             "Watering System",
             "Heater",
             "Lights"});
-            this.commandCenter.Location = new System.Drawing.Point(420, 218);
+            this.commandCenter.Location = new System.Drawing.Point(420, 261);
             this.commandCenter.Name = "commandCenter";
-            this.commandCenter.Size = new System.Drawing.Size(227, 304);
+            this.commandCenter.Size = new System.Drawing.Size(227, 144);
             this.commandCenter.TabIndex = 7;
             this.commandCenter.ThreeDCheckBoxes = true;
             this.commandCenter.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.commandCenter_ItemCheck);
             this.commandCenter.SelectedIndexChanged += new System.EventHandler(this.commandCenter_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoEllipsis = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Kristen ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(420, 179);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(227, 79);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Greenhouse Command Center";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Farm
             // 
@@ -209,6 +224,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(665, 547);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.commandCenter);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.coopButton);
@@ -243,6 +259,7 @@
         private System.IO.Ports.SerialPort serialPort4;
         private System.IO.Ports.SerialPort serialPort5;
         private System.Windows.Forms.CheckedListBox commandCenter;
+        private System.Windows.Forms.Label label1;
     }
 }
 
