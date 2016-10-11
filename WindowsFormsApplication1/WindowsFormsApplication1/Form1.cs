@@ -20,16 +20,24 @@ namespace WindowsFormsApplication1
         private void hiveOne_Click(object sender, EventArgs e)
         {
             mainLabel.Text = "Hive One Status: ";
+            //connect to serial port 1.
+            //display status dialog here.
         }
 
         private void hiveTwo_Click(object sender, EventArgs e)
         {
             mainLabel.Text = "Hive Two Status: ";
+            //connect to serial port 2.
+            //display status dialog here.
         }
 
         private void orchardButton_Click(object sender, EventArgs e)
         {
             mainLabel.Text = "Orchard Status: ";
+            //integrate trail camera(s) to reply to status with imagery of the orchard.
+            //integrate bluetooth connected temperature, precipitation, soil moisture and humiture device sensors.
+            //connect wirelessy through bluetooth to activate tumbler motors on composters.
+            //Reply with button click status "Tumblers Activated" and "Sensing Current Soil and Weather Conditions"
         }
 
         private void greenhouseButton_Click(object sender, EventArgs e)
