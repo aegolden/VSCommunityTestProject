@@ -13,6 +13,8 @@ namespace WindowsFormsApplication1
 {
     public partial class Farm : Form
     {
+        private string _lastOxygenReading;
+
         public Farm()
         {
             InitializeComponent();
@@ -44,7 +46,7 @@ namespace WindowsFormsApplication1
 
         private void greenhouseButton_Click(object sender, EventArgs e)
         {
-            mainLabel.Text = "Greenhouse Status: " + serialPort1.ReadLine();
+            mainLabel.Text = "Greenhouse Status (Oxygen): " + _lastOxygenReading;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -66,8 +68,7 @@ namespace WindowsFormsApplication1
         {
             //serial.write for gas sensor test. 
             SerialPort sp = (SerialPort)sender;
-            string indata = sp.ReadExisting();
-            Console.Write(indata);
+            _lastOxygenReading = sp.ReadLine();
         }
     }
 }
