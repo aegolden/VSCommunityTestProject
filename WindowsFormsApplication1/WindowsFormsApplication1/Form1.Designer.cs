@@ -178,6 +178,11 @@
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 6;
             // 
+            // serialPort1
+            // 
+            this.serialPort1.PortName = "COM3";
+            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
+            // 
             // Farm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);

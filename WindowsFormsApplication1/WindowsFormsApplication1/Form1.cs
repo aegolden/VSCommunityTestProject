@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO.Ports;
 
 namespace WindowsFormsApplication1
 {
@@ -58,6 +59,14 @@ namespace WindowsFormsApplication1
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
+        {
+            //serial.write for gas sensor test. 
+            SerialPort sp = (SerialPort)sender;
+            string indata = sp.ReadExisting();
+            Console.Write(indata);
         }
     }
 }

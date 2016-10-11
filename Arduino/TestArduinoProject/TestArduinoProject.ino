@@ -1,13 +1,16 @@
+const int gasPin = A0;
+
 void setup()
 {
 
-  /* add setup code here */
+	Serial.begin(9600);
 
 }
 
 void loop()
 {
 
-  /* add main program code here */
+	Serial.println(analogRead(gasPin));
+	delay(1000); // Print value every 1 sec.
 
 }
