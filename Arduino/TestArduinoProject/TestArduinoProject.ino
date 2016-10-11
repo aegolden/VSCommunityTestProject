@@ -6,6 +6,7 @@ void setup()
 
 	Serial.begin(9600);
 	pinMode(7, OUTPUT);
+	pinMode(5, OUTPUT);
 
 }
 
@@ -23,6 +24,11 @@ void loop()
 			digitalWrite(7, HIGH);
 		else if (command == 0xF0)
 			digitalWrite(7, LOW);
+
+		if (command == 0xEF)
+			digitalWrite(5, HIGH);
+		else if (command == 0xE0)
+			digitalWrite(5, LOW);
 	}
 
 }

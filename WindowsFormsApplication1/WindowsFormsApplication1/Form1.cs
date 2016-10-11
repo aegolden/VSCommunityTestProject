@@ -83,7 +83,8 @@ namespace WindowsFormsApplication1
 
         private void commandCenter_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            switch (e.Index) {
+            switch (e.Index)
+            {
                 case 0: // Fan
                     if (e.NewValue == CheckState.Checked)
                     {
@@ -93,6 +94,20 @@ namespace WindowsFormsApplication1
                     else if (e.NewValue == CheckState.Unchecked)
                     {
                         byte[] command = { 0xF0 };
+                        serialPort1.Write(command, 0, 1);
+                    }
+                    break;
+
+                case 4: //Lights
+                    if (e.NewValue == CheckState.Checked)
+                    {
+                        byte[] command = { 0xEF };
+                        serialPort1.Write(command, 0, 1);
+                    }
+
+                    else if (e.NewValue == CheckState.Unchecked)
+                    {
+                        byte[] command = { 0xE0 };
                         serialPort1.Write(command, 0, 1);
                     }
                     break;
