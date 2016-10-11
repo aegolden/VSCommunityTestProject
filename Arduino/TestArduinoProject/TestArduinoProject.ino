@@ -11,8 +11,18 @@ void setup()
 
 void loop()
 {
-	digitalWrite(7, HIGH);
+	//digitalWrite(7, HIGH);
 	Serial.println(String(analogRead(gasPin)));
-	delay(1000); // Print value every 1 sec.
+	delay(250);
+	//delay(1000); // Print value every 1 sec.
+
+	if (Serial.available() > 0) {
+		const unsigned char command = Serial.read();
+
+		if (command == 0xFF)
+			digitalWrite(7, HIGH);
+		else if (command == 0xF0)
+			digitalWrite(7, LOW);
+	}
 
 }
