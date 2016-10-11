@@ -225,6 +225,7 @@
             this.lightsDimmer.Name = "lightsDimmer";
             this.lightsDimmer.Size = new System.Drawing.Size(127, 45);
             this.lightsDimmer.TabIndex = 9;
+            this.lightsDimmer.TabStop = false;
             this.lightsDimmer.ValueChanged += new System.EventHandler(this.lightsDimmer_ValueChanged);
             // 
             // Farm
