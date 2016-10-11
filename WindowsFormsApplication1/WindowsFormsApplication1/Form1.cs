@@ -113,5 +113,13 @@ namespace WindowsFormsApplication1
                     break;
             }
         }
+
+        private void lightsDimmer_ValueChanged(object sender, EventArgs e)
+        {
+            int currentDimmerValue = lightsDimmer.Value;
+            byte dimByte = Convert.ToByte(255 * (currentDimmerValue / 10.0));
+            byte[] command = { 0xED,  dimByte};
+            serialPort1.Write(command, 0, 2);
+        }
     }
 }

@@ -43,6 +43,8 @@
             this.serialPort5 = new System.IO.Ports.SerialPort(this.components);
             this.commandCenter = new System.Windows.Forms.CheckedListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lightsDimmer = new System.Windows.Forms.TrackBar();
+            ((System.ComponentModel.ISupportInitialize)(this.lightsDimmer)).BeginInit();
             this.SuspendLayout();
             // 
             // hiveOneButton
@@ -198,7 +200,7 @@
             "Lights"});
             this.commandCenter.Location = new System.Drawing.Point(420, 261);
             this.commandCenter.Name = "commandCenter";
-            this.commandCenter.Size = new System.Drawing.Size(227, 144);
+            this.commandCenter.Size = new System.Drawing.Size(227, 172);
             this.commandCenter.TabIndex = 7;
             this.commandCenter.ThreeDCheckBoxes = true;
             this.commandCenter.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.commandCenter_ItemCheck);
@@ -217,6 +219,14 @@
             this.label1.Text = "Greenhouse Command Center";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lightsDimmer
+            // 
+            this.lightsDimmer.Location = new System.Drawing.Point(509, 378);
+            this.lightsDimmer.Name = "lightsDimmer";
+            this.lightsDimmer.Size = new System.Drawing.Size(127, 45);
+            this.lightsDimmer.TabIndex = 9;
+            this.lightsDimmer.ValueChanged += new System.EventHandler(this.lightsDimmer_ValueChanged);
+            // 
             // Farm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -224,6 +234,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(665, 547);
+            this.Controls.Add(this.lightsDimmer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.commandCenter);
             this.Controls.Add(this.monthCalendar1);
@@ -240,7 +251,9 @@
             this.Name = "Farm";
             this.Text = "Farm";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.lightsDimmer)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -260,6 +273,7 @@
         private System.IO.Ports.SerialPort serialPort5;
         private System.Windows.Forms.CheckedListBox commandCenter;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TrackBar lightsDimmer;
     }
 }
 

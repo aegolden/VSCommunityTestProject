@@ -1,5 +1,6 @@
 const int gasPin = A0;
 
+unsigned char currentDimmerValue = 0;
 
 void setup()
 {
@@ -26,9 +27,14 @@ void loop()
 			digitalWrite(7, LOW);
 
 		if (command == 0xEF)
-			digitalWrite(5, HIGH);
+			analogWrite(5, currentDimmerValue);
 		else if (command == 0xE0)
-			digitalWrite(5, LOW);
+			analogWrite(5, 0);
+
+		if (command == 0xED) {
+			const unsigned char param = Serial.read(); // This command takes an additional byte argument.
+			currentDimmerValue = param;
+		}
 	}
 
 }
