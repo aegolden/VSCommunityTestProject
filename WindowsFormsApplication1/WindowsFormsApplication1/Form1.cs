@@ -17,22 +17,22 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void hiveOne_Click(object sender, EventArgs e)
         {
             mainLabel.Text = "Hive One Status: ";
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void hiveTwo_Click(object sender, EventArgs e)
         {
             mainLabel.Text = "Hive Two Status: ";
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void orchardButton_Click(object sender, EventArgs e)
         {
             mainLabel.Text = "Orchard Status: ";
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void greenhouseButton_Click(object sender, EventArgs e)
         {
             mainLabel.Text = "Greenhouse Status: ";
         }
