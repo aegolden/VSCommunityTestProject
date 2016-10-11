@@ -43,7 +43,7 @@ namespace WindowsFormsApplication1
 
         private void greenhouseButton_Click(object sender, EventArgs e)
         {
-            mainLabel.Text = "Greenhouse Status: ";
+            mainLabel.Text = "Greenhouse Status: " + serialPort1.ReadExisting();
         }
 
         private void button4_Click(object sender, EventArgs e)
