@@ -75,7 +75,7 @@
             this.mainLabel.Location = new System.Drawing.Point(28, 261);
             this.mainLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.mainLabel.Name = "mainLabel";
-            this.mainLabel.Size = new System.Drawing.Size(259, 52);
+            this.mainLabel.Size = new System.Drawing.Size(383, 50);
             this.mainLabel.TabIndex = 1;
             this.mainLabel.Text = "Output...";
             this.mainLabel.Click += new System.EventHandler(this.mainLabel_Click);
