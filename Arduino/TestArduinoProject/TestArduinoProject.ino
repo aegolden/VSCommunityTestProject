@@ -40,7 +40,7 @@ void loop()
 			const unsigned char param = Serial.read(); // This command takes an additional byte argument.
 			currentDimmerValue = param;
 			if (lightsOn)
-				analogWrite(5, currentDimmerValue);
+				analogWrite(5, currentDimmerValue);  //dimmer control of lights.
 		}
 	}
 

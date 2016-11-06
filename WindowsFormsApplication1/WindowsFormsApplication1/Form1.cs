@@ -121,5 +121,10 @@ namespace WindowsFormsApplication1
             byte[] command = { 0xED,  dimByte};
             serialPort1.Write(command, 0, 2);
         }
+
+        private void farmCalenderToDo_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
     }
 }

@@ -35,7 +35,7 @@
             this.orchardButton = new System.Windows.Forms.Button();
             this.greenhouseButton = new System.Windows.Forms.Button();
             this.coopButton = new System.Windows.Forms.Button();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.farmCalenderToDo = new System.Windows.Forms.MonthCalendar();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
             this.serialPort3 = new System.IO.Ports.SerialPort(this.components);
@@ -175,12 +175,13 @@
             this.coopButton.UseVisualStyleBackColor = false;
             this.coopButton.Click += new System.EventHandler(this.button4_Click);
             // 
-            // monthCalendar1
+            // farmCalenderToDo
             // 
-            this.monthCalendar1.BackColor = System.Drawing.Color.Snow;
-            this.monthCalendar1.Location = new System.Drawing.Point(420, 18);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 6;
+            this.farmCalenderToDo.BackColor = System.Drawing.Color.Snow;
+            this.farmCalenderToDo.Location = new System.Drawing.Point(420, 18);
+            this.farmCalenderToDo.Name = "farmCalenderToDo";
+            this.farmCalenderToDo.TabIndex = 6;
+            this.farmCalenderToDo.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.farmCalenderToDo_DateChanged);
             // 
             // serialPort1
             // 
@@ -195,7 +196,8 @@
             this.commandCenter.Items.AddRange(new object[] {
             "Fan",
             "Vents",
-            "Watering System",
+            "Hydration",
+            "Fertilization",
             "Heater",
             "Lights"});
             this.commandCenter.Location = new System.Drawing.Point(420, 261);
@@ -238,7 +240,7 @@
             this.Controls.Add(this.lightsDimmer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.commandCenter);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.farmCalenderToDo);
             this.Controls.Add(this.coopButton);
             this.Controls.Add(this.greenhouseButton);
             this.Controls.Add(this.orchardButton);
@@ -266,7 +268,7 @@
         private System.Windows.Forms.Button orchardButton;
         private System.Windows.Forms.Button greenhouseButton;
         private System.Windows.Forms.Button coopButton;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar farmCalenderToDo;
         private System.IO.Ports.SerialPort serialPort1;
         private System.IO.Ports.SerialPort serialPort2;
         private System.IO.Ports.SerialPort serialPort3;
