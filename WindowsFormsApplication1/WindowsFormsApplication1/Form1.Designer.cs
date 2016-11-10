@@ -198,7 +198,6 @@
             "Vents",
             "Hydration",
             "Fertilization",
-            "Heater",
             "Lights"});
             this.commandCenter.Location = new System.Drawing.Point(420, 261);
             this.commandCenter.Name = "commandCenter";
@@ -223,9 +222,9 @@
             // 
             // lightsDimmer
             // 
-            this.lightsDimmer.Location = new System.Drawing.Point(509, 378);
+            this.lightsDimmer.Location = new System.Drawing.Point(508, 378);
             this.lightsDimmer.Name = "lightsDimmer";
-            this.lightsDimmer.Size = new System.Drawing.Size(127, 45);
+            this.lightsDimmer.Size = new System.Drawing.Size(116, 45);
             this.lightsDimmer.TabIndex = 9;
             this.lightsDimmer.TabStop = false;
             this.lightsDimmer.ValueChanged += new System.EventHandler(this.lightsDimmer_ValueChanged);
